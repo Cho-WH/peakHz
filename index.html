@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>실시간 주파수 분석 웹앱</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Chart.js 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>실시간 주파수 분석 웹앱</h1>
+    <div id="peak-frequency" class="info">Peak Frequency: -- Hz</div>
+    <canvas id="frequency-chart" width="800" height="400"></canvas>
+    <div class="controls">
+      <button id="download-button">데이터 다운로드</button>
+    </div>
+    <div id="status" class="status">마이크 접근을 요청 중입니다...</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
