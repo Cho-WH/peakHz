@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="styles.css">
   <!-- Chart.js 라이브러리 -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Luxon 및 Chart.js Luxon 어댑터 추가 -->
+  <script src="https://cdn.jsdelivr.net/npm/luxon"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon"></script>
 </head>
 <body>
   <div class="container">
@@ -15,7 +18,10 @@
     <div id="peak-frequency" class="info">Peak Frequency: -- Hz</div>
     <canvas id="frequency-chart" width="800" height="400"></canvas>
     <div class="controls">
-      <button id="download-button">데이터 다운로드</button>
+      <button id="start-button">녹음 시작</button>
+      <button id="stop-button" disabled>녹음 중지</button>
+      <button id="reset-button" disabled>리셋</button>
+      <button id="download-button" disabled>데이터 다운로드</button>
     </div>
     <div id="status" class="status">마이크 접근을 요청 중입니다...</div>
   </div>

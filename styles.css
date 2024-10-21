@@ -32,6 +32,9 @@ body {
   
   .controls {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
   
   button {
@@ -42,9 +45,15 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  button:hover {
+  button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
     background-color: #0056b3;
   }
   
